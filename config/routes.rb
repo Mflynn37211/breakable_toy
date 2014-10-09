@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :stadiums
   resources :trips
 
+  resource :inbox, :controller => 'inbox', :only => [:show,:create]
+
 end
 
 # The priority is based upon order of creation: first created -> highest priority.

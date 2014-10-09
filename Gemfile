@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'mandrill-rails'
 gem 'mini_magick'
 gem 'foundation-rails'
 gem 'carrierwave'
