@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+
+gem 'mini_magick'
+gem 'foundation-rails'
+gem 'carrierwave'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -25,7 +29,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,15 +42,15 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :test do
-  gem 'coveralls', require: false
+ gem 'coveralls', require: false
 end
 group :development, :test do
-  gem 'valid_attribute'
-  gem 'shoulda'
-  gem 'pry-rails'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'factory_girl_rails'
-  gem 'factory_girl'
- end
+ gem 'valid_attribute'
+ gem 'shoulda'
+ gem 'pry-rails'
+ gem 'rspec-rails'
+ gem 'capybara'
+ gem 'launchy'
+ gem 'factory_girl_rails'
+ gem 'factory_girl'
+end
