@@ -37,8 +37,11 @@ feature "User registration, sign in and sign out" do
     visit new_user_session_path
 
     fill_in "Email", with: user.email
+    fill_in "Username", with: user.username
     fill_in "Password", with: user.password
-    click_on "Log in"
+    attach_file "Profile photo", Rails.root.join('spec/file_fixtures/profile.jpg')
+
+    click_on "Login"
 
     expect(page).to have_content("Signed in successfully.")
 
@@ -62,3 +65,5 @@ feature "User registration, sign in and sign out" do
   end
 
 end
+
+

@@ -23,13 +23,13 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active">
-        <%= link_to "Stadiums", stadiums_path %>
-      </li>
-      <li class="active">
-       <%= link_to "Sign up", new_user_registration_path %>
-      </li>
-      </ul>
+      <li class="active"> <% if !user_signed_in? %> <%= link_to "Stadiums", stadiums_path %> </li>
+        <li class="active"><%= link_to "Sign up", new_user_registration_path %></li>
+      <% elsif user_signed_in? %>
+        <li class="active"> <%= link_to "Stadiums", stadiums_path %></li>
+        <li class="active"><%= link_to "Sign Out", destroy_user_session_path %></li>
+      <% end %>
+     </ul>
     <ul class="left">
       <li class="has-form">
   <div class="row collapse">
@@ -51,3 +51,5 @@
 
   </body>
 </html>
+
+
