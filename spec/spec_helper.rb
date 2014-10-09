@@ -26,7 +26,7 @@ RSpec.configure do |config|
     #   # => "be bigger than 2 and smaller than 4"
     # ...rather than:
     #   # => "be bigger than 2"
-    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
@@ -35,9 +35,8 @@ RSpec.configure do |config|
     # Prevents you from mocking or stubbing a method that does not exist on
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
-    mocks.verify_partial_doubles = true
+  mocks.verify_partial_doubles = true
   end
-
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
@@ -55,31 +54,28 @@ RSpec.configure do |config|
   #   - http://myronmars.to/n/dev-blog/2014/05/notable-changes-in-rspec-3#new__config_option_to_disable_rspeccore_monkey_patching
   config.disable_monkey_patching!
 
-  # Many RSpec users commonly either run the entire suite or an individual
-  # file, and it's useful to allow more verbose output when running an
-  # individual spec file.
-  if config.files_to_run.one?
-    # Use the documentation formatter for detailed output,
-    # unless a formatter has already been configured
-    # (e.g. via a command-line flag).
-    config.default_formatter = 'doc'
-  end
-
-  # Print the 10 slowest examples and example groups at the
-  # end of the spec run, to help surface which specs are running
-  # particularly slow.
-  config.profile_examples = 10
-
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
-  config.order = :random
-
-  # Seed global randomization in this process using the `--seed` CLI option.
-  # Setting this allows you to use `--seed` to deterministically reproduce
-  # test failures related to randomization by passing the same `--seed` value
-  # as the one that triggered the failure.
-  Kernel.srand config.seed
+ # Many RSpec users commonly either run the entire suite or an individual
+ # file, and it's useful to allow more verbose output when running an
+ # individual spec file.
+ if config.files_to_run.one?
+   # Use the documentation formatter for detailed output,
+   # unless a formatter has already been configured
+   # (e.g. via a command-line flag).
+   config.default_formatter = 'doc'
+ end
+ # Print the 10 slowest examples and example groups at the
+ # end of the spec run, to help surface which specs are running
+ # particularly slow.
+ config.profile_examples = 10
+ # Run specs in random order to surface order dependencies. If you find an
+ # order dependency and want to debug it, you can fix the order by providing
+ # the seed, which is printed after each run.
+ #     --seed 1234
+ config.order = :random
+ # Seed global randomization in this process using the `--seed` CLI option.
+ # Setting this allows you to use `--seed` to deterministically reproduce
+ # test failures related to randomization by passing the same `--seed` value
+ # as the one that triggered the failure.
+Kernel.srand config.seed
 =end
 end

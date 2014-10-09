@@ -1,0 +1,26 @@
+<h2>  Stadium: <%= @stadium.name %> </h2>
+  <div>
+    <%= image_tag @stadium['photo'] %>
+  </div>
+  <div>
+    Location: <%=@stadium.city %>, <%= @stadium.state %>
+  </div>
+  <div>
+    Capacity: <%= (@stadium.capacity)%>
+  </div>
+  <div>
+    Playing Surface: <%=@stadium.playing_surface %>
+  </div>
+  <div>
+     Roof Type: <%=@stadium.roof_type%>
+  </div>
+  <div>
+    TEAM: <%=@stadium.team %>
+  </div>
+  <div>
+    <%=image_tag @stadium['seating_chart'] %>
+  </div>
+  <div>
+   Description: ß<%=@stadium.description %>
+  </div>
+

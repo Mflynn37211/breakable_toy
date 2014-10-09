@@ -1,0 +1,6 @@
+Here is a list of Stadioums:
+<ul>
+<% @stadiums.each do |stadium| %>
+  <li><%= link_to stadium.name, stadium_path(stadium) %>
+</ul>
+<% end %>
